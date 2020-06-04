@@ -1,12 +1,14 @@
+let selectedColor = "red";
+
 const deleteRow = () => {
     let grid = document.getElementById("grid");
     grid.lastChild.remove();
 }
 
 const deleteColumn = () => {
-    let existingRows = document.querySelectorAll('.individual-row');
+    let existingRows = document.querySelectorAll(".individual-row");
     for (let i = 0; i < existingRows.length; i++){
-        existingRows.lastChild.remove();
+        existingRows[i].lastChild.remove();
     }
 }
 
@@ -55,4 +57,11 @@ const addCol = function () {
             existingRows[i].appendChild(ncol);
         }
     }
+}
+const changeColor = (color) => {
+    selectedColor = color;
+}
+
+const changeCellColor = (cell) => {
+    cell.style.backgroundColor = selectedColor;
 }
