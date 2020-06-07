@@ -62,8 +62,8 @@ const addCol = function () {
 
     }
 }
-const changeColor = (color) => {
-    selectedColor = color;
+const changeColor = () => {
+    selectedColor = document.getElementById("colorSelect").value;
 }
 
 const changeCellColor = (cell) => {
