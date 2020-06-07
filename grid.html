@@ -15,6 +15,12 @@
         <button onclick = "fillAllCells()">Fill All Cells</button>
         <button onclick = "resetCellColor()">Clear All Cells</button>
 
+        <select id="colorSelect" onchange="changeColor()">
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+        </select>
     </div>
 
     <table id = "grid">
