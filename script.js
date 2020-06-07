@@ -70,11 +70,11 @@ const changeCellColor = (cell) => {
     cell.style.backgroundColor = selectedColor;
 }
 
-//not working
+
 const fillUncoloredCells = () => {
     let allCells = document.querySelectorAll(".individual-col");
     for (let i = 0; i < allCells.length; i++){
-        if (allCells[i].style.backgroundColor == "#E9EEF7"){
+        if (allCells[i].style.backgroundColor == "" || allCells[i].style.backgroundColor == 'rgb(233, 238, 247)'){
             allCells[i].style.backgroundColor = selectedColor;
         }
     }
@@ -96,6 +96,6 @@ const fillAllCells = () => {
 
 const colorCell = function (ncol) {
     if (selectedColor != undefined) {
-        ncol.style.backgroundColor = selectedColor;
+        ncol.style.backgroundColor = selectedColor; 
     }
 }
