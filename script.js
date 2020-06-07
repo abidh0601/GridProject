@@ -20,6 +20,7 @@ const addRow = function () {
         nrow.className = "individual-row";
         let ncol = document.createElement('td');
         ncol.className = "individual-col";
+        ncol.onclick = function () { colorCell(ncol); };
         nrow.appendChild(ncol);
         id.appendChild(nrow);
     }
@@ -30,6 +31,7 @@ const addRow = function () {
         for (let i = 0; i < existingCols.length; i++) {
             let ncol = document.createElement('td');
             ncol.className = "individual-col";
+            ncol.onclick = function () { colorCell(ncol); };
             nrow.appendChild(ncol);
         }
         id.appendChild(nrow);
@@ -45,7 +47,7 @@ const addCol = function () {
         nrow.className = "individual-row";
         let ncol = document.createElement('td');
         ncol.className = "individual-col";
-
+        ncol.onclick = function () { colorCell(ncol); };
         nrow.appendChild(ncol);
         id.appendChild(nrow);
     }
@@ -54,8 +56,10 @@ const addCol = function () {
         for (let i = 0; i < existingRows.length; i++) {
             let ncol = document.createElement('td');
             ncol.className = "individual-col";
+            ncol.onclick = function () { colorCell(ncol); };
             existingRows[i].appendChild(ncol);
         }
+
     }
 }
 const changeColor = (color) => {
@@ -87,5 +91,11 @@ const fillAllCells = () => {
     let allCells = document.querySelectorAll(".individual-col");
     for (let i = 0; i < allCells.length; i++){
         allCells[i].style.backgroundColor = selectedColor;
+    }
+}
+
+const colorCell = function (ncol) {
+    if (selectedColor != undefined) {
+        ncol.style.backgroundColor = selectedColor;
     }
 }
