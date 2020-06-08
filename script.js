@@ -1,4 +1,9 @@
+let activeDrawing = false;
 let selectedColor = "red";
+
+document.addEventListener("mouseup", function() {
+    activeDrawing = false;
+})
 
 const deleteRow = () => {
     let grid = document.getElementById("grid");
@@ -21,6 +26,15 @@ const addRow = function () {
         let ncol = document.createElement('td');
         ncol.className = "individual-col";
         ncol.onclick = function () { colorCell(ncol); };
+        ncol.addEventListener("mousedown", function() {
+            activeDrawing = true;
+            colorCell(ncol);
+        });
+        ncol.addEventListener("mouseover", function() {
+            if (activeDrawing){
+                colorCell(ncol);
+            }
+        });
         nrow.appendChild(ncol);
         id.appendChild(nrow);
     }
@@ -32,6 +46,15 @@ const addRow = function () {
             let ncol = document.createElement('td');
             ncol.className = "individual-col";
             ncol.onclick = function () { colorCell(ncol); };
+            ncol.addEventListener("mousedown", function() {
+                activeDrawing = true;
+                colorCell(ncol);
+            });
+            ncol.addEventListener("mouseover", function() {
+                if (activeDrawing){
+                    colorCell(ncol);
+                }
+            });
             nrow.appendChild(ncol);
         }
         id.appendChild(nrow);
@@ -48,6 +71,15 @@ const addCol = function () {
         let ncol = document.createElement('td');
         ncol.className = "individual-col";
         ncol.onclick = function () { colorCell(ncol); };
+        ncol.addEventListener("mousedown", function() {
+            activeDrawing = true;
+            colorCell(ncol);
+        });
+        ncol.addEventListener("mouseover", function() {
+            if (activeDrawing){
+                colorCell(ncol);
+            }
+        });
         nrow.appendChild(ncol);
         id.appendChild(nrow);
     }
@@ -57,6 +89,15 @@ const addCol = function () {
             let ncol = document.createElement('td');
             ncol.className = "individual-col";
             ncol.onclick = function () { colorCell(ncol); };
+            ncol.addEventListener("mousedown", function() {
+                activeDrawing = true;
+                colorCell(ncol);
+            });
+            ncol.addEventListener("mouseover", function() {
+                if (activeDrawing){
+                    colorCell(ncol);
+                }
+            });
             existingRows[i].appendChild(ncol);
         }
 
