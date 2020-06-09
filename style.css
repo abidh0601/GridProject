@@ -2,5 +2,36 @@
     width: 20px;
     height: 20px;
     background-color: rgb(233, 238, 247);
-    border-width: 5px;
+}
+
+#nav-bar{
+    margin-bottom: 5px;
+}
+
+button{
+    width: 150px;
+    background-color: #E9EEF7;
+
+    border: none;
+    border-radius: 50px;
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-right: 5px;
+
+}
+
+button:hover {
+    background-color: rgb(78, 230, 83);
+}
+
+select{
+
+    width: 150px;
+    background-color: #E9EEF7;
+    border: none;
+    border-radius: 50px;
+
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
