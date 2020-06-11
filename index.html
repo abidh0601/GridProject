@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grid</title>
+  <link rel = "stylesheet" href = "style.css">
+  <script src = "script.js"></script>
+</head>
+<body>
+    <!-- the navigation bar with all of the buttons -->
+    <div id = "nav-bar">
+        <button onclick="addRow()">Add Row</button>
+        <button onclick="addCol()">Add Column</button>
+        <button onclick = "deleteRow()">Remove Row</button>
+        <button onclick = "deleteColumn()">Remove Column</button>
+        <button onclick = "fillUncoloredCells()">Fill Uncolored Cells</button>
+        <button onclick = "fillAllCells()">Fill All Cells</button>
+        <button onclick = "resetCellColor()">Clear All Cells</button>
+
+        <!-- color selection button -->
+        <select id="colorSelect" onchange="changeColor()">
+            <option value="#E9EEF7" selected>Default</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+        </select>
+    </div>
+
+    <!-- the empty table to be filled with rows and columns -->
+    <table id = "grid">
+    </table>
+
+</body>
+</html>
