@@ -1,5 +1,5 @@
 let activeDrawing = false; //true when mouse button is pressed and drawing is active
-let selectedColor = "red"; //current color
+let selectedColor = "#E9EEF7"; //current color
 
 //turns off drawing whenever the mouse button is released
 document.addEventListener("mouseup", function() {
